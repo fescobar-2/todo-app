@@ -1,5 +1,9 @@
 import React from "react";
 import './App.css';
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Navigation from "./Components/Navigation"
 
 function Todo ({ todo, index, completeTodo, removeTodo }) {
   return (
@@ -7,8 +11,8 @@ function Todo ({ todo, index, completeTodo, removeTodo }) {
       style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}>
       {todo.text}
       <div>
-      <button onClick={() => completeTodo(index)}>✓</button>
-      <button onClick={() => removeTodo(index)}>X</button>
+      <Button className="me-1" onClick={() => completeTodo(index)}>✓</Button>
+      <Button onClick={() => removeTodo(index)}>X</Button>
       </div>
     </div>
   );
@@ -25,14 +29,18 @@ function TodoForm({ addTodo }) {
   };
 
   return(
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        className="input"
-        value={value}
-        onChange={e => setValue(e.target.value)}
-      />
-    </form>
+    <Container className="mx-auto">
+      <Form onSubmit={handleSubmit}>
+        <Form.Control
+          type="text"
+          placeholder="Shopping Item..."
+          value={value}
+          onChange={e => setValue(e.target.value)}
+        />
+
+        <Button className="mt-2" type="submit" value="Submit">Add Item</Button>
+      </Form> 
+    </Container>
   )
 }
 
@@ -67,8 +75,9 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>React Shopping List</h1>
+    <Container className="app">
+      <Navigation/>
+      <h1 className="p-3 mb-2 text-light">React Shopping List</h1>
       <div className="todo-list">
         {todos.map((todo, index) => (
           <Todo
@@ -81,7 +90,7 @@ function App() {
         ))}
         <TodoForm addTodo={addTodo} />
       </div>
-    </div>
+    </Container>
   );
 }
 
