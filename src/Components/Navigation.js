@@ -6,7 +6,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 export default function Navigation() {
 	return(
-		<Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+		<Navbar collapseOnSelect expand="md" bg="primary" variant="dark">
 			<Container>
 			<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
