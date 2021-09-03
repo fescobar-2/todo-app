@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 
 
@@ -17,6 +18,8 @@ export default function Login() {
 
   return(
     <div className="Login">
+      <Container>
+
       <Form onSubmit={handleSubmit}>
         <Form.Group size="lg" controlId="email">
           <Form.Label>Email</Form.Label>
@@ -39,6 +42,7 @@ export default function Login() {
           Login
         </Button>
       </Form>
+      </Container>
     </div>
   );
 }

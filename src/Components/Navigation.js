@@ -14,6 +14,9 @@ export default function Navigation() {
 					<Nav.Link href="/">Shopping List</Nav.Link>
 					<Nav.Link href="/shopping">Todo List</Nav.Link>
 				</Nav>
+				<Nav className="me-auto">
+					<Nav.Link href="/login">Login</Nav.Link>
+				</Nav>
 			</Navbar.Collapse>
 			</Container>
 		</Navbar>
