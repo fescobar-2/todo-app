@@ -9,13 +9,13 @@ export default function MainRouter() {
   return(<div>
     <Navigation/>
     <Switch>
-      <Route exact path="/">
+      <Route exact path={`${process.env.PUBLIC_URL}/`}>
         <Home/>
       </Route>
-      <Route path="/shopping">
+      <Route path={`${process.env.PUBLIC_URL}/shopping`}>
         <Shopping/>
       </Route>
-      <Route path="/login">
+      <Route path={`${process.env.PUBLIC_URL}/login`}>
         <Login/>
       </Route>
     </Switch>

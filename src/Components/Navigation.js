@@ -11,11 +11,11 @@ export default function Navigation() {
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="me-auto">
-					<Nav.Link href="/">Shopping List</Nav.Link>
-					<Nav.Link href="/shopping">Todo List</Nav.Link>
+					<Nav.Link href={`${process.env.PUBLIC_URL}/`}>Shopping List</Nav.Link>
+					<Nav.Link href={`${process.env.PUBLIC_URL}/shopping`}>Todo List</Nav.Link>
 				</Nav>
 				<Nav className="me-auto">
-					<Nav.Link href="/login">Login</Nav.Link>
+					<Nav.Link href={`${process.env.PUBLIC_URL}/login`}>Login</Nav.Link>
 				</Nav>
 			</Navbar.Collapse>
 			</Container>
