@@ -5,7 +5,7 @@ import MainRouter from "./MainRouter";
 
 const App = () => {
   return(
-    <BrowserRouter basename="https://shoppinglistreact.netlify.app">
+    <BrowserRouter>
       <MainRouter/>
     </BrowserRouter>
   )
