@@ -1,18 +1,20 @@
 import React from "react";
-import Navbar from "react-bootstrap/Navbar";
-//import Nav from "react-bootstrap/Nav";
+//import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navigation() {
 	return(
 		<div>
-      <Navbar collapseOnSelect expand="md" bg="primary" variant="dark">
-		  <Container>
-			  <Link to ="/">Home</Link>
-			  <Link to="/login">Login</Link>
-			</Container>
-      </Navbar>
+        <Container>
+          <Nav className="me-auto">
+            <NavLink to ="/">Home</NavLink>
+          </Nav>
+          <Nav className="me-auto">
+            <NavLink to ="/login">Login</NavLink>
+          </Nav>
+        </Container>
 		</div>
 		// <Navbar collapseOnSelect expand="md" bg="primary" variant="dark">
 		// 	<Container>
