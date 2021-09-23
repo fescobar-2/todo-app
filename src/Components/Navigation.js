@@ -5,13 +5,13 @@ import { LinkContainer } from "react-router-bootstrap";
 export default function Navigation() {
 	return(
 		<div>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" >
           <LinkContainer to="/">
-            <Navbar.Brand>Shopping List</Navbar.Brand>
+            <Navbar.Brand className="ml-8" >Shopping List</Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
+              <Nav className="ml-8">
                 <LinkContainer to="/">
                   <Nav.Link>Home</Nav.Link>
                 </LinkContainer>
